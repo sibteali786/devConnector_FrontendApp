@@ -1,3 +1,21 @@
+// Text Sizes
+.x-large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
 // backgrounds
 .bg {
   &-primary {
@@ -9,6 +27,9 @@
   &-accent {
     @include set-background($accentColor);
   }
+  &-tertiary {
+    @include set-background($tertiaryColor);
+  }
   &-danger {
     @include set-background($dangerColor);
   }
@@ -18,4 +39,58 @@
   &-font {
     @include set-background(#fff);
   }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $tertiaryColor;
+  color: #000;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+  &.btn-accent {
+    @include set-background($accentColor);
+
+    &:hover {
+      background: lighten($accentColor, 5%);
+    }
+  }
+  &.btn-tertiary {
+    @include set-background($tertiaryColor);
+    &:hover {
+      background: lighten($tertiaryColor, 5%);
+    }
+  }
+  &.btn-success {
+    @include set-background($successColor);
+
+    &:hover {
+      background: lighten($successColor, 5%);
+    }
+  }
+  &.btn-danger {
+    @include set-background($dangerColor);
+
+    &:hover {
+      background: lighten($dangerColor, 5%);
+    }
+  }
+
+  &:hover {
+    background: lighten($primaryColor, 20%);
+  }
+}
+// backrundimages
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
