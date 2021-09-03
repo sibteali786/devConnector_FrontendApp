@@ -1,0 +1,21 @@
+// backgrounds
+.bg {
+  &-primary {
+    @include set-background($primaryColor);
+  }
+  &-secondary {
+    @include set-background($secondaryColor);
+  }
+  &-accent {
+    @include set-background($accentColor);
+  }
+  &-danger {
+    @include set-background($dangerColor);
+  }
+  &-success {
+    @include set-background($successColor);
+  }
+  &-font {
+    @include set-background(#fff);
+  }
+}

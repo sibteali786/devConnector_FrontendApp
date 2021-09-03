@@ -1,0 +1,22 @@
+$primaryColor: #264653;
+$secondaryColor: #e9c46a;
+$accentColor: #f4a261;
+$fontColor: #ffff;
+$successColor: #2a9d8f;
+$dangerColor: #f94144;
+$maxWidth: 1200px;
+
+// Set text color based on ground color
+@function set-text-color($color) {
+  @if (lightness($color) < 50) {
+    @return #0000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// set background and text Color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
