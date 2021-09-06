@@ -1,6 +1,12 @@
-
-
-
+// Container
+.container {
+  max-width: $maxWidth;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
 
 // Text Sizes
 .x-large {
@@ -20,6 +26,13 @@
   margin-bottom: 1rem;
 }
 
+.text-primary {
+  color: $accentColor;
+}
+
+.text-main {
+  color: $fontColor;
+}
 // backgrounds
 .bg {
   &-primary {
