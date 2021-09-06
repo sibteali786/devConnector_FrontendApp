@@ -102,6 +102,29 @@
     background: lighten($primaryColor, 20%);
   }
 }
+
+// Alerts
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background: $accentColor;
+  color: $fontColor;
+  &.alert-tertiary {
+    @include set-background($tertiaryColor);
+  }
+  &.alert-accent {
+    @include set-background($accentColor);
+  }
+  &.alert-danger {
+    @include set-background($dangerColor);
+    color: #fff;
+  }
+  &.alert-success {
+    @include set-background($successColor);
+  }
+}
+
 // backrundimages
 .dark-overlay {
   height: 100%;
