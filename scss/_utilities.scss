@@ -24,10 +24,14 @@
 .lead {
   font-size: 1rem;
   margin-bottom: 1rem;
-} 
+}
 
 .text-primary {
   color: $accentColor;
+}
+
+.text-normal {
+  color: $successColor;
 }
 
 .text-main {
